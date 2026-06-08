@@ -1,0 +1,13 @@
+.venv/
+.idea/
+
+__pycache__/
+.pytest_cache/
+
+*.pkl
+*.joblib
+
+data/raw/
+data/processed/
+
+*.pyc
