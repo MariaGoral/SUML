@@ -1,0 +1,25 @@
+Fake Job Offer Detector - raport strojenia hiperparametrów
+
+Model bazowy:
+Logistic Regression + TF-IDF
+
+Metoda:
+GridSearchCV, scoring=f1, cv=3
+
+Najlepsze parametry:
+{'classifier__C': 10.0, 'classifier__class_weight': 'balanced', 'tfidf__max_features': 10000, 'tfidf__ngram_range': (1, 2)}
+
+Najlepszy średni F1-score w walidacji krzyżowej:
+0.7858
+
+Wyniki najlepszego modelu na zbiorze testowym:
+Accuracy: 0.9838
+Precision: 0.7979
+Recall: 0.8902
+F1-score: 0.8415
+Balanced accuracy: 0.9394
+ROC-AUC: 0.9919
+
+Wygenerowane pliki:
+- hyperparameter_tuning_results.csv
+- tuned_model.pkl

@@ -1,0 +1,44 @@
+Fake Job Offer Detector - raport ewaluacji modelu
+
+Cel etapu:
+Porównanie jakości modeli, przygotowanie metryk, wykresów, analizy błędów oraz wskazanie najlepszego modelu.
+
+Dane:
+Liczba rekordów: 17880
+Prawdziwe oferty: 17014
+Fałszywe oferty: 866
+
+Porównane modele:
+- Random Forest
+- Logistic Regression
+- Multinomial Naive Bayes
+
+Wyniki:
+             model_name  accuracy  precision   recall  f1_score  balanced_accuracy  roc_auc
+          Random Forest  0.981264   1.000000 0.612717  0.759857           0.806358 0.984149
+    Logistic Regression  0.972036   0.986667 0.427746  0.596774           0.713726 0.984928
+Multinomial Naive Bayes  0.968121   0.915493 0.375723  0.532787           0.686980 0.945215
+
+Najlepszy model:
+Random Forest
+Accuracy: 0.9813
+Precision: 1.0000
+Recall: 0.6127
+F1-score: 0.7599
+Balanced accuracy: 0.8064
+ROC-AUC: 0.9841
+
+Analiza błędów:
+Liczba błędnych klasyfikacji w zbiorze testowym: 67
+Szczegóły błędów zapisano w pliku error_analysis.csv.
+
+Wygenerowane pliki:
+- model_comparison.csv
+- error_analysis.csv
+- model_metrics.png
+- confusion_matrix.png
+- roc_curve.png
+
+Wniosek:
+Najważniejszą metryką w projekcie jest F1-score, ponieważ wykrywana klasa fałszywych ofert jest rzadsza niż klasa prawdziwych ofert. Accuracy może być mylące przy niezbalansowanych danych.
+Po przeprowadzeniu strojenia hiperparametrów najlepszy wynik uzyskał model Tuned Logistic Regression. Model osiągnął F1-score = 0.8415, recall = 0.8902 oraz ROC-AUC = 0.9919. Oznacza to poprawę względem najlepszego modelu bazowego, którym był Random Forest z F1-score = 0.7599.
