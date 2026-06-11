@@ -42,6 +42,16 @@ PROCESSED_DATA_PATH: Final[Path] = PROCESSED_DIR / "cleaned_jobs.csv"
 RAW_ANALYSIS_REPORT_PATH: Final[Path] = PROCESSED_DIR / "analysis_report_raw.txt"
 PROCESSED_ANALYSIS_REPORT_PATH: Final[Path] = PROCESSED_DIR / "analysis_report_processed.txt"
 MODEL_PATH: Final[Path] = PROJECT_ROOT / "model" / "saved_model.pkl"
+EVALUATION_OUTPUT_DIR: Final[Path] = PROJECT_ROOT / "model" / "evaluation_results"
+MODEL_COMPARISON_PATH: Final[Path] = EVALUATION_OUTPUT_DIR / "model_comparison.csv"
+ERROR_ANALYSIS_PATH: Final[Path] = EVALUATION_OUTPUT_DIR / "error_analysis.csv"
+EVALUATION_REPORT_PATH: Final[Path] = EVALUATION_OUTPUT_DIR / "evaluation_report.txt"
+MODEL_METRICS_PLOT_PATH: Final[Path] = EVALUATION_OUTPUT_DIR / "model_metrics.png"
+CONFUSION_MATRIX_PLOT_PATH: Final[Path] = EVALUATION_OUTPUT_DIR / "confusion_matrix.png"
+ROC_CURVE_PLOT_PATH: Final[Path] = EVALUATION_OUTPUT_DIR / "roc_curve.png"
+TUNING_RESULTS_PATH: Final[Path] = EVALUATION_OUTPUT_DIR / "hyperparameter_tuning_results.csv"
+TUNING_REPORT_PATH: Final[Path] = EVALUATION_OUTPUT_DIR / "hyperparameter_tuning_report.txt"
+TUNED_MODEL_PATH: Final[Path] = PROJECT_ROOT / "model" / "tuned_model.pkl"
 
 # --- Parametry ML ---
 RANDOM_STATE: Final[int] = 42
