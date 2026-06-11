@@ -4,10 +4,11 @@
 __pycache__/
 .pytest_cache/
 
+*.pyc
+
 *.pkl
 *.joblib
+!model/tuned_model.pkl
 
 data/raw/
 data/processed/
-
-*.pycdata/raw/
