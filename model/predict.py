@@ -7,6 +7,7 @@ import sys
 from typing import Optional
 
 from config import LABEL_NAMES, MISSING_TEXT_PLACEHOLDER
+from config import TUNED_MODEL_PATH
 from data.preprocessing import clean_text
 from model.model_utils import ModelLoadError, PredictionResult, load_model_artifact
 
@@ -33,7 +34,7 @@ def _get_artifact() -> dict:
     global _cached_artifact  # pylint: disable=global-statement
 
     if _cached_artifact is None:
-        _cached_artifact = load_model_artifact()
+        _cached_artifact = load_model_artifact(TUNED_MODEL_PATH)
 
     return _cached_artifact
 
